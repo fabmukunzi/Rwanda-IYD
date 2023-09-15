@@ -6,9 +6,9 @@ import AppLayout from '../layouts/appLayout';
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    // <AppLayout>
-        <Component {...pageProps} />
-    // </AppLayout>
+    <AppLayout>
+      <Component {...pageProps} />
+    </AppLayout>
   );
 };
 

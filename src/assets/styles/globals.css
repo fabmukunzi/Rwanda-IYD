@@ -2,33 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:wght@500&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-.App{
-  background-image: url("../images/Rectangle\ 3.png");
+.App {
+  background-image: url('../images/Rectangle\ 3.png');
   background-size: cover;
-  height:100vh;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+.underline-animation {
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.underline-animation::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #041A57;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.underline-animation:hover::before,
+.underline-animation:focus::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.custom-bg{
+  background-image: url("../images/banner-text-bg.png");
+  background-color: #041A57;
+  background-size: cover;
+  color: #ffc107;
 }
