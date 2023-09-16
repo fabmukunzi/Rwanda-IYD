@@ -1,5 +1,11 @@
+import { Badge } from 'antd';
+import Countdown from 'react-countdown';
 
-const Home=()=>{
-    return <p>About</p>
-}
-export default Home
+const Home = () => {
+  return (
+    <div className="py-32">
+      About
+    </div>
+  );
+};
+export default Home;

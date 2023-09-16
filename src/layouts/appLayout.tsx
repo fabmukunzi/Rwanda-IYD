@@ -21,9 +21,9 @@ const AppLayout: React.FC<Props> = ({ children }) => {
         <Cheader />
       </Header>
       <Content className="site-layout">{children}</Content>
-      <Footer style={{ textAlign: 'center' }}>
+      {/* <Footer style={{ textAlign: 'center' }}>
         2023 IRYD, all Rights reserved{' '}
-      </Footer>
+      </Footer> */}
     </Layout>
   );
 };
