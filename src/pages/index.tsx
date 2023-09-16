@@ -7,12 +7,14 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Image from 'next/image';
 import { homeBg, slide1, slide2 } from '../utils/images';
 import CcountDown from '../components/countdown';
+import { useRouter } from 'next/router';
 
 type Props = {
   component: React.ReactNode;
 };
 const App: FC<Props> = () => {
   const { Text } = Typography;
+  const router=useRouter();
   return (
     <div className="relative flex flex-col-reverse mt-20 md:mt-0">
       <div className="md:absolute py-10 px-10 custom-bg left-20 top-52 text-2xl z-[99] text-center w-fit md:w-[30rem] font-bold font-sanz">
@@ -24,7 +26,7 @@ const App: FC<Props> = () => {
           <p className="my-4">REMAINING</p>
           <CcountDown />
         </div>
-        <Button className="h-12 w-32 font-bold hover:bg-[#dcbc5b] text-primary border-none bg-[#ffc107] text-xl mt-10">
+        <Button onClick={()=>router.push('/events/book')} className="h-12 w-32 font-bold hover:bg-[#dcbc5b] text-primary border-none bg-[#ffc107] text-xl mt-10">
           Book
         </Button>
       </div>
