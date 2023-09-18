@@ -4,7 +4,7 @@ const CcountDown = () => {
   return (
     <Countdown
       className="text-3xl"
-      date="2023-09-25T00:00:00"
+      date="2023-11-25T00:00:00"
       intervalDelay={0}
       precision={3}
       renderer={({ days, hours, minutes, completed }) => {

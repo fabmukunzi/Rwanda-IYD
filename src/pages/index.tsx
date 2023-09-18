@@ -26,7 +26,7 @@ const App: FC<Props> = () => {
           <p className="my-4">REMAINING</p>
           <CcountDown />
         </div>
-        <Button onClick={()=>router.push('/events/book')} className="h-12 w-32 font-bold hover:bg-[#dcbc5b] text-primary border-none bg-[#ffc107] text-xl mt-10">
+        <Button onClick={()=>router.push('/events/book')} className="h-12 w-32 font-bold font-sanz hover:!text-primary text-primary border-none bg-[#ffc107] text-xl mt-10">
           Book
         </Button>
       </div>
